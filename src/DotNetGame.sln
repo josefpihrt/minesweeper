@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetGame.Cli", "DotNetGame.Cli\DotNetGame.Cli.csproj", "{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetGame.Minesweeper", "DotNetGame.Minesweeper\DotNetGame.Minesweeper.csproj", "{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC5234F1-F307-4D5E-9DA9-BF2BE981D4FF}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
+		Directory.Build.props = Directory.Build.props
+		..\README.md = ..\README.md
+		..\tools\reinstall_tool.ps1 = ..\tools\reinstall_tool.ps1
+		..\tools\reinstall_tool_debug.ps1 = ..\tools\reinstall_tool_debug.ps1
+		spellcheck = spellcheck
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3483FCE3-E927-4F4F-A3A7-90027A0F6B3A}
+	EndGlobalSection
+EndGlobal

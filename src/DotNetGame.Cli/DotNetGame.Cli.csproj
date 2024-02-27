@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>DotNetGame.Cli</AssemblyName>
+    <RootNamespace>DotNetGame</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotnet-game</ToolCommandName>
+    <PackageId>dotnet-game</PackageId>
+    <Description>Play games on the command line.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<None Include="..\..\images\minesweeper-logo-small.png" Pack="true" PackagePath="icon.png" Visible="false" />-->
+    <None Include="docs\NuGetReadme.md" Pack="true" PackagePath="docs\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="docs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetGame.Minesweeper\DotNetGame.Minesweeper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
