@@ -16,6 +16,9 @@ public class MinesweeperGuideCommand : Command
             ("Shift+Arrow", "Expand selection"),
             ("P", "Pause game"),
             ("Ctrl+C", "Cancel game"),
+#if DEBUG
+            ("Space", "Show mines"),
+#endif
         };
 
         var presets = new (string Name, string Description)[]

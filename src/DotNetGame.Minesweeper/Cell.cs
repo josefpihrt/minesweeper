@@ -12,9 +12,9 @@ public class Cell
         Field = field;
     }
 
-    public bool IsUnknown => State == CellStates.Unknown || State == CellStates.Questionable;
+    public bool IsUnknown => State == CellStates.Unknown || State == CellStates.QuestionMark;
 
-    public bool IsQuestionable => State == CellStates.Questionable;
+    public bool IsQuestionMark => State == CellStates.QuestionMark;
 
     public bool IsFlagged => State == CellStates.Flagged;
 

@@ -190,7 +190,7 @@ public class Renderer
                 return Options.EmptyCellFormat;
             }
 
-            return (cell.IsQuestionable) ? Options.QuestionableCellFormat : Options.UnknownCellFormat;
+            return (cell.IsQuestionMark) ? Options.QuestionMarkCellFormat : Options.UnknownCellFormat;
         }
         else if (cell.IsEmpty)
         {

@@ -7,12 +7,12 @@ public class MinesweeperOptions
     [JsonIgnore]
     public MinesweeperPreset DefaultPreset { get; set; } = null!;
     public List<MinesweeperPreset> Presets { get; set; } = [];
-    public bool UseQuestionable { get; set; }
+    public bool UseQuestionMark { get; set; }
     public bool ShowRemainingMines { get; set; }
     public CellDisplayFormat SelectedCellFormat { get; set; }
     public CellDisplayFormat VerticalSeparatorCellFormat { get; set; }
     public CellDisplayFormat UnknownCellFormat { get; set; }
-    public CellDisplayFormat QuestionableCellFormat { get; set; }
+    public CellDisplayFormat QuestionMarkCellFormat { get; set; }
     public CellDisplayFormat EmptyCellFormat { get; set; }
     public CellDisplayFormat FlaggedCellFormat { get; set; }
     public CellDisplayFormat IncorrectlyFlaggedCellFormat { get; set; }
@@ -34,7 +34,7 @@ public class MinesweeperOptions
             Width = DefaultPreset.Width,
             Height = DefaultPreset.Height,
             MineCount = DefaultPreset.MineCount,
-            UseQuestionable = UseQuestionable,
+            UseQuestionMark = UseQuestionMark,
         };
 
         var renderOptions = new RenderOptions()
@@ -43,7 +43,7 @@ public class MinesweeperOptions
             SelectedCellFormat = SelectedCellFormat,
             VerticalSeparatorCellFormat = VerticalSeparatorCellFormat,
             UnknownCellFormat = UnknownCellFormat,
-            QuestionableCellFormat = QuestionableCellFormat,
+            QuestionMarkCellFormat = QuestionMarkCellFormat,
             EmptyCellFormat = EmptyCellFormat,
             FlaggedCellFormat = FlaggedCellFormat,
             IncorrectlyFlaggedCellFormat = IncorrectlyFlaggedCellFormat,

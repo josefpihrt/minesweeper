@@ -1,6 +1,6 @@
 {
   "minesweeper": {
-    "useQuestionable": false,
+    "useQuestionMark": false,
     "showRemainingMines": true,
     "presets": [
       {
@@ -48,7 +48,7 @@
       "foregroundColor": "DarkGray",
       "backgroundColor": null
     },
-    "questionableCellFormat": {
+    "questionMarkCellFormat": {
       "character": "?",
       "foregroundColor": "DarkGray",
       "backgroundColor": null

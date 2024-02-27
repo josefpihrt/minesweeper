@@ -6,7 +6,7 @@ public class RenderOptions
     public CellDisplayFormat SelectedCellFormat { get; set; }
     public CellDisplayFormat VerticalSeparatorCellFormat { get; set; }
     public CellDisplayFormat UnknownCellFormat { get; set; }
-    public CellDisplayFormat QuestionableCellFormat { get; set; }
+    public CellDisplayFormat QuestionMarkCellFormat { get; set; }
     public CellDisplayFormat EmptyCellFormat { get; set; }
     public CellDisplayFormat FlaggedCellFormat { get; set; }
     public CellDisplayFormat IncorrectlyFlaggedCellFormat { get; set; }

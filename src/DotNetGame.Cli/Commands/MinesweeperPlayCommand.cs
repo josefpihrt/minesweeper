@@ -32,7 +32,7 @@ public class MinesweeperPlayCommand : Command
             }
         });
 
-        QuestionableOption = new Option<bool?>("--questionable", "Allow marking cells as questionable.");
+        QuestionMarkOption = new Option<bool?>("--question-mark", "Allow marking cells with question mark.");
         NoSeparatorOption = new Option<bool?>("--no-separator", "Do not render separator between each cell in a row.");
         NoRemainingMines = new Option<bool?>("--no-remaining-mines", "Do not show remaining unflagged mines.");
 
@@ -41,7 +41,7 @@ public class MinesweeperPlayCommand : Command
         AddOption(HeightOption);
         AddOption(MineCountOption);
         AddOption(DensityOption);
-        AddOption(QuestionableOption);
+        AddOption(QuestionMarkOption);
         AddOption(NoSeparatorOption);
         AddOption(NoRemainingMines);
 
@@ -71,7 +71,7 @@ public class MinesweeperPlayCommand : Command
             int? heightOpt = result.GetValueForOption(HeightOption);
             int? mineCountOpt = result.GetValueForOption(MineCountOption);
             int? densityOpt = result.GetValueForOption(DensityOption);
-            bool? useQuestionableOpt = result.GetValueForOption(QuestionableOption);
+            bool? useQuestionMarkOpt = result.GetValueForOption(QuestionMarkOption);
             bool? noVerticalSeparatorOpt = result.GetValueForOption(NoSeparatorOption);
             bool? noRemainingMinesOpt = result.GetValueForOption(NoRemainingMines);
 
@@ -90,8 +90,8 @@ public class MinesweeperPlayCommand : Command
             if (mineCountOpt is not null)
                 preset = preset with { MineCount = mineCountOpt.Value };
 
-            if (useQuestionableOpt is not null)
-                MinesweeperOptions.UseQuestionable = useQuestionableOpt.Value;
+            if (useQuestionMarkOpt is not null)
+                MinesweeperOptions.UseQuestionMark = useQuestionMarkOpt.Value;
 
             if (noVerticalSeparatorOpt == true)
                 MinesweeperOptions.VerticalSeparatorCellFormat = MinesweeperOptions.VerticalSeparatorCellFormat with { Character = '\0' };
@@ -183,7 +183,7 @@ public class MinesweeperPlayCommand : Command
     public Option<int?> HeightOption { get; }
     public Option<int?> MineCountOption { get; }
     public Option<int?> DensityOption { get; }
-    public Option<bool?> QuestionableOption { get; }
+    public Option<bool?> QuestionMarkOption { get; }
     public Option<bool?> NoSeparatorOption { get; }
     public Option<bool?> NoRemainingMines { get; }
     public MinesweeperOptions MinesweeperOptions { get; }

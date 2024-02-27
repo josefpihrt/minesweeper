@@ -85,9 +85,9 @@ public sealed class MineField
             {
                 if (cell.IsFlagged)
                 {
-                    UpdateCellState(cell, (Options.UseQuestionable) ? CellStates.Questionable : CellStates.Unknown);
+                    UpdateCellState(cell, (Options.UseQuestionMark) ? CellStates.QuestionMark : CellStates.Unknown);
                 }
-                else if (cell.IsQuestionable)
+                else if (cell.IsQuestionMark)
                 {
                     UpdateCellState(cell, CellStates.Unknown);
                 }
@@ -206,7 +206,7 @@ public sealed class MineField
                 FlagCount++;
                 break;
 
-            case CellStates.Questionable:
+            case CellStates.QuestionMark:
                 Debug.Assert(cell.State == CellStates.Flagged);
                 _unknownCells.Add(cell);
                 FlagCount--;
@@ -220,7 +220,7 @@ public sealed class MineField
                 }
                 else
                 {
-                    Debug.Assert(cell.State == CellStates.Questionable);
+                    Debug.Assert(cell.State == CellStates.QuestionMark);
                 }
 
                 break;

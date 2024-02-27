@@ -6,7 +6,7 @@ public class MineFieldOptions
     private int _width = 16;
     private int _height = 16;
 
-    public bool UseQuestionable { get; set; }
+    public bool UseQuestionMark { get; set; }
 
     public int Width
     {
