@@ -17,7 +17,7 @@ public class MinesweeperGuideCommand : Command
             ("P", "Pause game"),
             ("Ctrl+C", "Cancel game"),
 #if DEBUG
-            ("Space", "Show mines"),
+            ("Space", "Hint mines"),
 #endif
         };
 

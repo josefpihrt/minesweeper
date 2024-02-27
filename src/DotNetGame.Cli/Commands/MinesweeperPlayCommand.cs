@@ -10,7 +10,7 @@ public class MinesweeperPlayCommand : Command
     {
         MinesweeperOptions = minesweeperOptions;
 
-        PresetArgument = new Argument<string?>("PRESET", "A size and a number of mines. Predefined values are '[b]eginner', '[i]ntermediate', '[e]xpert' and 'max'.")
+        PresetArgument = new Argument<string?>("PRESET", "A size and a number of mines. Predefined values are '[b]eginner', '[i]ntermediate' and '[e]xpert'.")
         {
             Arity = ArgumentArity.ZeroOrOne
         };
