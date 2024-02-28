@@ -2,7 +2,7 @@
 
 public class RenderOptions
 {
-    public bool ShowRemainingMines { get; set; }
+    public bool ShowMineCount { get; set; }
     public CellDisplayFormat SelectedCellFormat { get; set; }
     public CellDisplayFormat VerticalSeparatorCellFormat { get; set; }
     public CellDisplayFormat UnknownCellFormat { get; set; }

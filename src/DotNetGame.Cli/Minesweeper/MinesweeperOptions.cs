@@ -8,7 +8,7 @@ public class MinesweeperOptions
     public MinesweeperPreset DefaultPreset { get; set; } = null!;
     public List<MinesweeperPreset> Presets { get; set; } = [];
     public bool UseQuestionMark { get; set; }
-    public bool ShowRemainingMines { get; set; }
+    public bool ShowMineCount { get; set; }
     public CellDisplayFormat SelectedCellFormat { get; set; }
     public CellDisplayFormat VerticalSeparatorCellFormat { get; set; }
     public CellDisplayFormat UnknownCellFormat { get; set; }
@@ -39,7 +39,7 @@ public class MinesweeperOptions
 
         var renderOptions = new RenderOptions()
         {
-            ShowRemainingMines = ShowRemainingMines,
+            ShowMineCount = ShowMineCount,
             SelectedCellFormat = SelectedCellFormat,
             VerticalSeparatorCellFormat = VerticalSeparatorCellFormat,
             UnknownCellFormat = UnknownCellFormat,

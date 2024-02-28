@@ -30,7 +30,7 @@ public class Renderer
 
         Height = Field.Height + 1;
 
-        if (Options.ShowRemainingMines)
+        if (Options.ShowMineCount)
         {
             Height++;
             _fieldTop++;
@@ -81,7 +81,7 @@ public class Renderer
         }
         else if (CellChanges?.Count > changeCount)
         {
-            if (Options.ShowRemainingMines)
+            if (Options.ShowMineCount)
             {
                 SetCursorPosition(_left, _top);
                 Console.Write(new string(' ', Width));
@@ -116,7 +116,7 @@ public class Renderer
         }
         else
         {
-            if (Options.ShowRemainingMines)
+            if (Options.ShowMineCount)
             {
                 Console.Write(new string(' ', Width));
                 SetCursorPosition(_left, _top);

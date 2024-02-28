@@ -32,9 +32,9 @@ public class MinesweeperPlayCommand : Command
             }
         });
 
-        QuestionMarkOption = new Option<bool?>("--question-mark", "Allow marking cells with question mark.");
+        QuestionMarkOption = new Option<bool?>("--question-mark", "Allow marking cells with a question mark.");
         NoSeparatorOption = new Option<bool?>("--no-separator", "Do not render separator between each cell in a row.");
-        NoRemainingMines = new Option<bool?>("--no-remaining-mines", "Do not show remaining unflagged mines.");
+        NoMineCount = new Option<bool?>("--no-mine-count", "Do not show number of unflagged mines.");
 
         AddArgument(PresetArgument);
         AddOption(WidthOption);
@@ -43,7 +43,7 @@ public class MinesweeperPlayCommand : Command
         AddOption(DensityOption);
         AddOption(QuestionMarkOption);
         AddOption(NoSeparatorOption);
-        AddOption(NoRemainingMines);
+        AddOption(NoMineCount);
 
         AddValidator(result =>
         {
@@ -73,7 +73,7 @@ public class MinesweeperPlayCommand : Command
             int? densityOpt = result.GetValueForOption(DensityOption);
             bool? useQuestionMarkOpt = result.GetValueForOption(QuestionMarkOption);
             bool? noVerticalSeparatorOpt = result.GetValueForOption(NoSeparatorOption);
-            bool? noRemainingMinesOpt = result.GetValueForOption(NoRemainingMines);
+            bool? noMineCountOpt = result.GetValueForOption(NoMineCount);
 
             if (densityOpt.HasValue
                 && mineCountOpt.HasValue)
@@ -96,8 +96,8 @@ public class MinesweeperPlayCommand : Command
             if (noVerticalSeparatorOpt == true)
                 MinesweeperOptions.VerticalSeparatorCellFormat = MinesweeperOptions.VerticalSeparatorCellFormat with { Character = '\0' };
 
-            if (noRemainingMinesOpt == true)
-                MinesweeperOptions.ShowRemainingMines = false;
+            if (noMineCountOpt == true)
+                MinesweeperOptions.ShowMineCount = false;
 
             int width = preset.Width;
             int height = preset.Height;
@@ -130,7 +130,7 @@ public class MinesweeperPlayCommand : Command
 
             int maxHeight = Console.WindowHeight - 1;
 
-            if (MinesweeperOptions.ShowRemainingMines)
+            if (MinesweeperOptions.ShowMineCount)
                 maxHeight--;
 
             if (height > maxHeight)
@@ -185,6 +185,6 @@ public class MinesweeperPlayCommand : Command
     public Option<int?> DensityOption { get; }
     public Option<bool?> QuestionMarkOption { get; }
     public Option<bool?> NoSeparatorOption { get; }
-    public Option<bool?> NoRemainingMines { get; }
+    public Option<bool?> NoMineCount { get; }
     public MinesweeperOptions MinesweeperOptions { get; }
 }

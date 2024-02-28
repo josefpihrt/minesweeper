@@ -1,7 +1,7 @@
 {
   "minesweeper": {
     "useQuestionMark": false,
-    "showRemainingMines": true,
+    "showMineCount": true,
     "presets": [
       {
         "name": "beginner",
