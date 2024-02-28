@@ -1,10 +1,6 @@
 # dotnet-game
 
-Play games on the command line.
-
-## List of Games
-
-- Minesweeper
+Play classic games on the command line.
 
 ## Installation
 
@@ -12,4 +8,10 @@ Play games on the command line.
 dotnet tool install dotnet-game -g
 ```
 
-<!-- TODO -->
+### Minesweeper
+
+Run following command to play Minesweeper:
+
+```bash
+dotnet game minesweeper play
+```
