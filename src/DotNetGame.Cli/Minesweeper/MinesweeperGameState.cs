@@ -2,7 +2,7 @@
 
 namespace DotNetGame.Minesweeper;
 
-internal class MinesweeperGameState
+internal sealed class MinesweeperGameState
 {
     public MinesweeperGameState(MineField field, Renderer renderer)
     {

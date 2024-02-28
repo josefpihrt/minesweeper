@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace DotNetGame.Minesweeper;
 
@@ -63,11 +64,11 @@ public sealed class MineField
     {
         get
         {
-            if (row >= Height
-                || column >= Width)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            if (row >= Height)
+                throw new ArgumentException("", nameof(row));
+
+            if (column >= Width)
+                throw new ArgumentException("", nameof(column));
 
             return _cells[row, column];
         }

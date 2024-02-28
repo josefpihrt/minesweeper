@@ -8,6 +8,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest-Recommended</AnalysisLevel>
     <RoslynatorAnalyzersVersion>4.10.0</RoslynatorAnalyzersVersion>
   </PropertyGroup>
 
