@@ -9,9 +9,9 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>dotnet-game</ToolCommandName>
-    <PackageId>dotnet-game</PackageId>
-    <Description>Play games on the command line.</Description>
+    <ToolCommandName>dotnet-minesweeper</ToolCommandName>
+    <PackageId>dotnet-minesweeper</PackageId>
+    <Description>Play Minesweeper on the command line.</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotNetGame.Minesweeper\DotNetGame.Minesweeper.csproj" />
+    <ProjectReference Include="..\Minesweeper.Core\Minesweeper.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

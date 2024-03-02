@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetGame.Cli", "DotNetGame.Cli\DotNetGame.Cli.csproj", "{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minesweeper.Cli", "Minesweeper.Cli\Minesweeper.Cli.csproj", "{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetGame.Minesweeper", "DotNetGame.Minesweeper\DotNetGame.Minesweeper.csproj", "{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minesweeper.Core", "Minesweeper.Core\Minesweeper.Core.csproj", "{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC5234F1-F307-4D5E-9DA9-BF2BE981D4FF}"
 	ProjectSection(SolutionItems) = preProject

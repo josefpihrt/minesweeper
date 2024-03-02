@@ -11,20 +11,14 @@ internal static class Program
     {
         ApplicationOptions appOptions = ApplicationOptions.Load();
 
-        var rootCommand = new RootCommand("Play games on the command line.") { Name = "dotnet-game" };
-
-        var minesweeperCommand = new Command("minesweeper", "Minesweeper.");
-#if DEBUG
-        minesweeperCommand.AddAlias("m");
-#endif
-        rootCommand.AddCommand(minesweeperCommand);
+        var rootCommand = new RootCommand("Play Minesweeper on the command line.") { Name = "dotnet-minesweeper" };
 
         var minesweeperPlayCommand = new MinesweeperPlayCommand(appOptions.Minesweeper);
 #if DEBUG
         minesweeperPlayCommand.AddAlias("p");
 #endif
-        minesweeperCommand.AddCommand(minesweeperPlayCommand);
-        minesweeperCommand.AddCommand(new MinesweeperGuideCommand());
+        rootCommand.AddCommand(minesweeperPlayCommand);
+        rootCommand.AddCommand(new MinesweeperGuideCommand());
 
         bool treatControlCAsInput = Console.TreatControlCAsInput;
         bool? cursorVisible = null;
