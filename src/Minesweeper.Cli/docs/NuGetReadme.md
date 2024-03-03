@@ -8,10 +8,6 @@ Play Minesweeper on the command line.
 dotnet tool install dotnet-minesweeper -g
 ```
 
-```bash
-dotnet minesweeper play
-```
-
 ## Keybindings
 
 | Key | Action |
