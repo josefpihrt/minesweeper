@@ -3,10 +3,10 @@ using DotNetGame.Minesweeper;
 
 namespace DotNetGame.Commands;
 
-public class MinesweeperPlayCommand : Command
+public class MinesweeperCommand : RootCommand
 {
-    public MinesweeperPlayCommand(MinesweeperOptions minesweeperOptions)
-        : base("play", "Play Minesweeper.")
+    public MinesweeperCommand(MinesweeperOptions minesweeperOptions)
+        : base("Play Minesweeper.")
     {
         MinesweeperOptions = minesweeperOptions;
 

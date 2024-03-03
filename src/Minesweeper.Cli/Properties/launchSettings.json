@@ -2,7 +2,7 @@
   "profiles": {
     "Minesweeper": {
       "commandName": "Project",
-      "commandLineArgs": "minesweeper play"
+      "commandLineArgs": "-h"
     }
   }
 }

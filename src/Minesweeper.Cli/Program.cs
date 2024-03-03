@@ -1,6 +1,9 @@
 ﻿using System.CommandLine;
+using System.CommandLine.Builder;
+using System.CommandLine.Help;
 using System.CommandLine.Parsing;
 using System.Runtime.InteropServices;
+using System.Text;
 using DotNetGame.Commands;
 
 namespace DotNetGame;
@@ -11,14 +14,21 @@ internal static class Program
     {
         ApplicationOptions appOptions = ApplicationOptions.Load();
 
-        var rootCommand = new RootCommand("Play Minesweeper on the command line.") { Name = "dotnet-minesweeper" };
+        var rootCommand = new MinesweeperCommand(appOptions.Minesweeper) { Name = "dotnet-minesweeper" };
 
-        var minesweeperPlayCommand = new MinesweeperPlayCommand(appOptions.Minesweeper);
-#if DEBUG
-        minesweeperPlayCommand.AddAlias("p");
-#endif
-        rootCommand.AddCommand(minesweeperPlayCommand);
-        rootCommand.AddCommand(new MinesweeperGuideCommand());
+        Parser parser = new CommandLineBuilder(rootCommand)
+            .UseDefaults()
+            .UseHelp(context =>
+            {
+                context.HelpBuilder.CustomizeLayout(
+                    _ =>
+                        HelpBuilder.Default
+                            .GetLayout()
+                            .Append(
+                                _ => context.Output.WriteLine(GetAdditionalHelpText())
+                    ));
+            })
+            .Build();
 
         bool treatControlCAsInput = Console.TreatControlCAsInput;
         bool? cursorVisible = null;
@@ -33,7 +43,7 @@ internal static class Program
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 Console.CursorVisible = false;
 
-            return await rootCommand.InvokeAsync(args);
+            return await parser.InvokeAsync(args);
         }
         finally
         {
@@ -42,5 +52,34 @@ internal static class Program
             if (cursorVisible is not null)
                 Console.CursorVisible = cursorVisible.Value;
         }
+    }
+
+    private static string GetAdditionalHelpText()
+    {
+        var keys = new (string Key, string Description)[]
+        {
+            ("Enter", "Open cell"),
+            ("Ctrl+Enter", "Flag cell"),
+            ("Ctrl+Arrow", "Jump to next unknown cell"),
+            ("Shift+Arrow", "Expand selection"),
+            ("P", "Pause game"),
+            ("Ctrl+C", "Cancel game"),
+#if DEBUG
+            ("Space", "Hint mines"),
+#endif
+        };
+
+        int columnWidth = keys.Max(k => k.Key.Length) + 2;
+
+        var sb = new StringBuilder();
+        sb.Append("Keybindings:");
+
+        foreach ((string Key, string Description) in keys)
+        {
+            sb.AppendLine();
+            sb.Append(Key.PadRight(columnWidth) + Description);
+        }
+
+        return sb.ToString();
     }
 }
