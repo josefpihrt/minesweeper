@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minesweeper.Cli", "Minesweeper.Cli\Minesweeper.Cli.csproj", "{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minesweeper", "Minesweeper\Minesweeper.csproj", "{042539BD-CC2B-4B26-BEF8-8DAD6741C09E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minesweeper.Core", "Minesweeper.Core\Minesweeper.Core.csproj", "{6AA9EBF9-2CD0-4B5D-A67C-B2A805A9262C}"
 EndProject

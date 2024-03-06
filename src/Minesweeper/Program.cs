@@ -14,7 +14,7 @@ internal static class Program
     {
         ApplicationOptions appOptions = ApplicationOptions.Load();
 
-        var rootCommand = new MinesweeperCommand(appOptions.Minesweeper) { Name = "dotnet-minesweeper" };
+        var rootCommand = new MinesweeperCommand(appOptions.Minesweeper) { Name = "minesweeper" };
 
         Parser parser = new CommandLineBuilder(rootCommand)
             .UseDefaults()

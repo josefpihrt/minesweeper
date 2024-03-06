@@ -1,11 +1,11 @@
-# dotnet-minesweeper
+# Minesweeper.CommandLine
 
 Play Minesweeper on the command line.
 
 ## Installation
 
 ```bash
-dotnet tool install dotnet-minesweeper -g
+dotnet tool install minesweeper.commandline -g
 ```
 
 ## Keybindings

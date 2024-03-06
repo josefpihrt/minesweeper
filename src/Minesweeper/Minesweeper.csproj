@@ -9,8 +9,8 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>dotnet-minesweeper</ToolCommandName>
-    <PackageId>dotnet-minesweeper</PackageId>
+    <ToolCommandName>minesweeper</ToolCommandName>
+    <PackageId>Minesweeper.CommandLine</PackageId>
     <Description>Play Minesweeper on the command line.</Description>
   </PropertyGroup>
 
