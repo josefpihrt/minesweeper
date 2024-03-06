@@ -1,4 +1,4 @@
-﻿namespace DotNetGame;
+﻿namespace Minesweeper;
 
 public enum GameResult
 {

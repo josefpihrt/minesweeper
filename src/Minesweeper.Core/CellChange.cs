@@ -1,3 +1,3 @@
-﻿namespace DotNetGame.Minesweeper;
+﻿namespace Minesweeper;
 
 public readonly record struct CellChange(Cell Cell, int State, int NewState);

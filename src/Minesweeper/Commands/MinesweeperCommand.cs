@@ -1,7 +1,6 @@
 ﻿using System.CommandLine;
-using DotNetGame.Minesweeper;
 
-namespace DotNetGame.Commands;
+namespace Minesweeper.Commands;
 
 public class MinesweeperCommand : RootCommand
 {

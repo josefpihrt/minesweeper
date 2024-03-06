@@ -4,9 +4,9 @@ using System.CommandLine.Help;
 using System.CommandLine.Parsing;
 using System.Runtime.InteropServices;
 using System.Text;
-using DotNetGame.Commands;
+using Minesweeper.Commands;
 
-namespace DotNetGame;
+namespace Minesweeper;
 
 internal static class Program
 {

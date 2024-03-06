@@ -1,7 +1,6 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace DotNetGame.Minesweeper;
+namespace Minesweeper;
 
 public sealed class MineField
 {

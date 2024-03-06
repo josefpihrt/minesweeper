@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>DotNetGame.Minesweeper</AssemblyName>
-    <RootNamespace>DotNetGame.Minesweeper</RootNamespace>
+    <AssemblyName>Minesweeper.Core</AssemblyName>
+    <RootNamespace>Minesweeper</RootNamespace>
   </PropertyGroup>
 
 </Project>

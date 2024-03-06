@@ -1,4 +1,4 @@
-﻿namespace DotNetGame.Minesweeper;
+﻿namespace Minesweeper;
 
 public enum FieldState
 {

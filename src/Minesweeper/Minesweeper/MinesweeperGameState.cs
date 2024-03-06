@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace DotNetGame.Minesweeper;
+namespace Minesweeper;
 
 internal sealed class MinesweeperGameState
 {

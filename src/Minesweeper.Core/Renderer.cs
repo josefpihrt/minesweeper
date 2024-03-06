@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace DotNetGame.Minesweeper;
+namespace Minesweeper;
 
 public class Renderer
 {

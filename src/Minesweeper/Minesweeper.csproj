@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <AssemblyName>DotNetGame.Cli</AssemblyName>
-    <RootNamespace>DotNetGame</RootNamespace>
+    <AssemblyName>Minesweeper</AssemblyName>
+    <RootNamespace>Minesweeper</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>

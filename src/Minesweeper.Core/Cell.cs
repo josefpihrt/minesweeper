@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace DotNetGame.Minesweeper;
+namespace Minesweeper;
 
 [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 public class Cell

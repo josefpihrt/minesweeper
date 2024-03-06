@@ -1,8 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using DotNetGame.Minesweeper;
 
-namespace DotNetGame;
+namespace Minesweeper;
 
 public class ApplicationOptions
 {
