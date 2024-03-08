@@ -4,7 +4,6 @@ using System.CommandLine.Help;
 using System.CommandLine.Parsing;
 using System.Runtime.InteropServices;
 using System.Text;
-using Minesweeper.Commands;
 
 namespace Minesweeper;
 
@@ -14,19 +13,26 @@ internal static class Program
     {
         ApplicationOptions appOptions = ApplicationOptions.Load();
 
-        var rootCommand = new MinesweeperCommand(appOptions.Minesweeper) { Name = "minesweeper" };
+        var rootCommand = new RootCommand("Play Minesweeper.") { Name = "minesweeper" };
+
+        var playCommand = new PlayCommand(appOptions.Minesweeper);
+
+        rootCommand.AddCommand(playCommand);
 
         Parser parser = new CommandLineBuilder(rootCommand)
             .UseDefaults()
             .UseHelp(context =>
             {
-                context.HelpBuilder.CustomizeLayout(
-                    _ =>
-                        HelpBuilder.Default
-                            .GetLayout()
-                            .Append(
-                                _ => context.Output.WriteLine(GetAdditionalHelpText())
-                    ));
+                if (context.Command == playCommand)
+                {
+                    context.HelpBuilder.CustomizeLayout(
+                        _ =>
+                            HelpBuilder.Default
+                                .GetLayout()
+                                .Append(
+                                    _ => context.Output.WriteLine(GetAdditionalHelpText())
+                        ));
+                }
             })
             .Build();
 
@@ -72,6 +78,7 @@ internal static class Program
         int columnWidth = keys.Max(k => k.Key.Length) + 2;
 
         var sb = new StringBuilder();
+
         sb.Append("Keybindings:");
 
         foreach ((string Key, string Description) in keys)

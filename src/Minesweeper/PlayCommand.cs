@@ -1,11 +1,11 @@
 ﻿using System.CommandLine;
 
-namespace Minesweeper.Commands;
+namespace Minesweeper;
 
-public class MinesweeperCommand : RootCommand
+public class PlayCommand : Command
 {
-    public MinesweeperCommand(MinesweeperOptions minesweeperOptions)
-        : base("Play Minesweeper.")
+    public PlayCommand(MinesweeperOptions minesweeperOptions)
+        : base("play", "Play Minesweeper.")
     {
         MinesweeperOptions = minesweeperOptions;
 
