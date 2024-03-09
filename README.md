@@ -24,5 +24,5 @@ dotnet tool install minesweeper.commandline -g
 | Name | Width | Height | Mines |
 | --- | ---:| ---:| ---:|
 | Beginner | 9 | 9 | 10 |
-| Intermediate | 16 | 16 | 40 |
+| Intermediate (default) | 16 | 16 | 40 |
 | Expert | 30 | 16 | 99 |
