@@ -109,7 +109,7 @@ public class Renderer
 
         if (FieldDisplayMode == FieldDisplayMode.HideAll)
         {
-            Clear();
+            ClearField();
             SetCursorPosition(_fieldLeft + (Field.Width / 2) + 3, _fieldTop + (Field.Height / 2) - 1);
             Console.Write("PAUSED");
             SetCursorPosition(_left, _top + Height - 1);
@@ -351,12 +351,25 @@ public class Renderer
         }
     }
 
-    public void Clear()
+    private void ClearField()
     {
         var line = new string(' ', Width);
         var sb = new StringBuilder();
 
         for (int i = 0; i < Height - 1; i++)
+            sb.AppendLine(line);
+
+        Console.Write(sb.ToString());
+    }
+
+    public void Clear()
+    {
+        SetCursorPosition(_left, _top);
+
+        var line = new string(' ', Console.WindowWidth);
+        var sb = new StringBuilder();
+
+        for (int i = 0; i < Console.WindowHeight - 1; i++)
             sb.AppendLine(line);
 
         Console.Write(sb.ToString());
