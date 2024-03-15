@@ -74,6 +74,7 @@ internal sealed class MinesweeperGameState
                     }
                 case ConsoleKey.R:
                     {
+                        Renderer.Clear();
                         Renderer.RenderField();
                         break;
                     }

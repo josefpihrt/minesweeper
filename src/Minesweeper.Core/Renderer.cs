@@ -351,7 +351,7 @@ public class Renderer
         }
     }
 
-    private void Clear()
+    public void Clear()
     {
         var line = new string(' ', Width);
         var sb = new StringBuilder();
