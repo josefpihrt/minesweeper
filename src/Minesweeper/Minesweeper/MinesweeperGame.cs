@@ -48,24 +48,20 @@ public class MinesweeperGame
                     throw new InvalidOperationException();
             }
 
-            Console.WriteLine("Start another game (y/n)?");
+            Console.WriteLine("Start another game (Enter) or quit (Ctrl+C)");
 
             while (true)
             {
                 ConsoleKeyInfo info = Console.ReadKey(intercept: true);
 
-                if (info.Key == ConsoleKey.Y)
+                if (info.Key == ConsoleKey.Enter)
                 {
                     break;
-                }
-                else if (info.Key == ConsoleKey.N)
-                {
-                    return summary.Result;
                 }
                 else if (info.Key == ConsoleKey.C)
                 {
                     if (info.Modifiers == ConsoleModifiers.Control)
-                        return GameResult.Canceled;
+                        return summary.Result;
                 }
             }
         }

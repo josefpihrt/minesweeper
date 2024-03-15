@@ -39,6 +39,7 @@ internal sealed class MinesweeperGameState
 
             bool control = info.Modifiers == ConsoleModifiers.Control;
             bool shift = info.Modifiers == ConsoleModifiers.Shift;
+            bool alt = info.Modifiers == ConsoleModifiers.Alt;
 
             if (info.Key == ConsoleKey.P
                 && info.Modifiers == ConsoleModifiers.None)
@@ -77,7 +78,7 @@ internal sealed class MinesweeperGameState
                         break;
                     }
 #endif
-                case ConsoleKey.Enter:
+                case ConsoleKey.Q:
                     {
                         if (!Stopwatch.IsRunning)
                             Stopwatch.Start();
@@ -117,7 +118,7 @@ internal sealed class MinesweeperGameState
                             if (Column > 0)
                                 SelectCells(Row, Column - 1);
                         }
-                        else if (control)
+                        else if (alt)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsLeft(), cell.IsUnknown);
@@ -142,7 +143,7 @@ internal sealed class MinesweeperGameState
                             if (Row > 0)
                                 SelectCells(Row - 1, Column);
                         }
-                        else if (control)
+                        else if (alt)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsUp(), cell.IsUnknown);
@@ -162,7 +163,7 @@ internal sealed class MinesweeperGameState
                             if (Column < Width - 1)
                                 SelectCells(Row, Column + 1);
                         }
-                        else if (control)
+                        else if (alt)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsRight(), cell.IsUnknown);
@@ -186,7 +187,7 @@ internal sealed class MinesweeperGameState
                             if (Row < Height - 1)
                                 SelectCells(Row + 1, Column);
                         }
-                        else if (control)
+                        else if (alt)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsDown(), cell.IsUnknown);

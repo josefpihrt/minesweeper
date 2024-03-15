@@ -64,11 +64,12 @@ internal static class Program
     {
         var keys = new (string Key, string Description)[]
         {
-            ("Enter", "Open cell"),
-            ("Ctrl+Enter", "Flag cell"),
-            ("Ctrl+Arrow", "Jump to next unknown cell"),
+            ("Q", "Open cell"),
+            ("Ctrl+Q", "Flag cell"),
+            ("Alt+Arrow", "Jump to next unknown cell"),
             ("Shift+Arrow", "Expand selection"),
             ("P", "Pause game"),
+            ("R", "Re-render"),
             ("Ctrl+C", "Cancel game"),
 #if DEBUG
             ("Space", "Hint mines"),
@@ -81,10 +82,10 @@ internal static class Program
 
         sb.Append("Keybindings:");
 
-        foreach ((string Key, string Description) in keys)
+        foreach ((string key, string description) in keys)
         {
             sb.AppendLine();
-            sb.Append(Key.PadRight(columnWidth) + Description);
+            sb.Append(key.PadRight(columnWidth) + description);
         }
 
         return sb.ToString();
