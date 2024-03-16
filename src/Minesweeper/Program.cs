@@ -69,8 +69,8 @@ internal static class Program
             ("Alt+Arrow", "Jump to next unknown cell"),
             ("Shift+Arrow", "Expand selection"),
             ("P", "Pause game"),
-            ("R", "Re-render"),
             ("Ctrl+C", "Cancel game"),
+            ("R", "Re-render screen"),
 #if DEBUG
             ("Space", "Hint mines"),
 #endif

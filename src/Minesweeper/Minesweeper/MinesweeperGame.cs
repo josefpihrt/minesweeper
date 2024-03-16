@@ -48,7 +48,7 @@ public class MinesweeperGame
                     throw new InvalidOperationException();
             }
 
-            Console.WriteLine("Start another game (Enter) or quit (Ctrl+C)");
+            Console.WriteLine("Start another game (Enter) or quit (Ctrl+C)?");
 
             while (true)
             {
