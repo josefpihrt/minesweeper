@@ -84,7 +84,25 @@ internal sealed class MinesweeperGameState
                         if (!Stopwatch.IsRunning)
                             Stopwatch.Start();
 
-                        Renderer.ChangeSelectedCellsState(flag: control);
+                        Renderer.ChangeSelectedCellsState(flag: false);
+
+                        switch (Field.State)
+                        {
+                            case FieldState.MineHit:
+                                return GameResult.Lost;
+
+                            case FieldState.Completed:
+                                return GameResult.Won;
+                        }
+
+                        break;
+                    }
+                case ConsoleKey.W:
+                    {
+                        if (!Stopwatch.IsRunning)
+                            Stopwatch.Start();
+
+                        Renderer.ChangeSelectedCellsState(flag: true);
 
                         switch (Field.State)
                         {
