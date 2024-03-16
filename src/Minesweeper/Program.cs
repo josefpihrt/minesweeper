@@ -65,7 +65,7 @@ internal static class Program
         var keys = new List<(string Key, string Description)>();
 
         keys.Add(("Q", "Open cell"));
-        keys.Add(("Ctrl+Q", "Flag cell"));
+        keys.Add(("W", "Flag cell"));
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
