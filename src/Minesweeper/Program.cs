@@ -62,19 +62,27 @@ internal static class Program
 
     private static string GetAdditionalHelpText()
     {
-        var keys = new (string Key, string Description)[]
+        var keys = new List<(string Key, string Description)>();
+
+        keys.Add(("Q", "Open cell"));
+        keys.Add(("Ctrl+Q", "Flag cell"));
+
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            ("Q", "Open cell"),
-            ("Ctrl+Q", "Flag cell"),
-            ("Alt+Arrow", "Jump to next unknown cell"),
-            ("Shift+Arrow", "Expand selection"),
-            ("P", "Pause game"),
-            ("Ctrl+C", "Cancel game"),
-            ("R", "Re-render screen"),
+            keys.Add(("Option+Arrow", "Jump to next unknown cell"));
+        }
+        else
+        {
+            keys.Add(("Alt+Arrow", "Jump to next unknown cell"));
+        }
+
+        keys.Add(("Shift+Arrow", "Expand selection"));
+        keys.Add(("P", "Pause game"));
+        keys.Add(("Ctrl+C", "Cancel game"));
+        keys.Add(("R", "Re-render screen"));
 #if DEBUG
-            ("Space", "Hint mines"),
+        keys.Add(("Space", "Hint mines"));
 #endif
-        };
 
         int columnWidth = keys.Max(k => k.Key.Length) + 2;
 
