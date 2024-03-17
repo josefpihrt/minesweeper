@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.CommandLine;
 
 namespace Minesweeper;
@@ -175,7 +176,14 @@ public class PlayCommand : Command
 
                 var game = new MinesweeperGame(fieldOptions, renderOptions);
 
-                context.ExitCode = (int)game.RunLoop();
+                try
+                {
+                    context.ExitCode = (int)game.RunLoop();
+                }
+                catch (OperationCanceledException)
+                {
+                    context.ExitCode = (int)GameResult.Canceled;
+                }
             });
     }
 

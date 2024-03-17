@@ -58,7 +58,7 @@ public class MinesweeperGame
                 return summary.Result;
 
             if (info is { Key: ConsoleKey.C, Modifiers: ConsoleModifiers.Control })
-                return GameResult.Canceled;
+                throw new OperationCanceledException();
         }
 
         static void WriteElapsedTime(GameSummary summary)

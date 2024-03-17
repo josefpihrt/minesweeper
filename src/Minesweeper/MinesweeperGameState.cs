@@ -228,7 +228,7 @@ internal sealed class MinesweeperGameState
                 case ConsoleKey.C:
                     {
                         if (control)
-                            return GameResult.Canceled;
+                            throw new OperationCanceledException();
 
                         break;
                     }
