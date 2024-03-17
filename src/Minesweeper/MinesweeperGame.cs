@@ -50,15 +50,21 @@ public class MinesweeperGame
                     throw new InvalidOperationException();
             }
 
-            Console.WriteLine("Press 'q' to quit or press any key to start a new game ...");
+            Console.WriteLine("Press Enter to start a new game...");
 
-            ConsoleKeyInfo info = Console.ReadKey(intercept: true);
+            while (true)
+            {
+                ConsoleKeyInfo info = Console.ReadKey(intercept: true);
 
-            if (info.Key == ConsoleKey.Q)
-                return summary.Result;
+                if (info.Key == ConsoleKey.Enter)
+                    break;
 
-            if (info is { Key: ConsoleKey.C, Modifiers: ConsoleModifiers.Control })
-                throw new OperationCanceledException();
+                if (info.Key == ConsoleKey.Q)
+                    return summary.Result;
+
+                if (info is { Key: ConsoleKey.C, Modifiers: ConsoleModifiers.Control })
+                    throw new OperationCanceledException();
+            }
         }
 
         static void WriteElapsedTime(GameSummary summary)
