@@ -27,8 +27,8 @@ public class PlayCommand : Command
         {
             int? density = result.GetValueOrDefault<int?>();
 
-            if (density <= 0
-                || density >= 100)
+            if (density < 1
+                || density > 99)
             {
                 result.ErrorMessage = "Density must be between 1 and 99.";
             }
