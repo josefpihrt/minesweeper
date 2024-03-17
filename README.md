@@ -12,12 +12,12 @@ dotnet tool install minesweeper.commandline -g
 
 | Key | Action |
 | --- | --- |
-| Q | Open cell |
-| W | Flag cell |
+| A | Open cell |
+| S | Flag cell |
 | Alt+Arrow (Option+Arrow on Mac) | Jump to next unknown cell |
 | Shift+Arrow | Expand selection |
 | P | Pause game |
-| Ctrl+C | Cancel game |
+| Q | Cancel game |
 | R | Re-render screen |
 
 ## Presets

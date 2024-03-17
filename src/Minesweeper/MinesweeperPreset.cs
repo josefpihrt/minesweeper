@@ -2,7 +2,4 @@
 
 namespace Minesweeper;
 
-public class ChangeTracker
-{
-    public List<CellChange> Changes { get; } = [];
-}
+public record MinesweeperPreset(string Name, char ShortName, int Width, int Height, int MineCount, bool IsDefault);

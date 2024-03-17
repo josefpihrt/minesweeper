@@ -1,4 +1,6 @@
-﻿using System.CommandLine;
+﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+
+using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Parsing;
@@ -64,8 +66,8 @@ internal static class Program
     {
         var keys = new List<(string Key, string Description)>();
 
-        keys.Add(("Q", "Open cell"));
-        keys.Add(("W", "Flag cell"));
+        keys.Add(("A", "Open cell"));
+        keys.Add(("S", "Flag cell"));
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
@@ -78,7 +80,7 @@ internal static class Program
 
         keys.Add(("Shift+Arrow", "Expand selection"));
         keys.Add(("P", "Pause game"));
-        keys.Add(("Ctrl+C", "Cancel game"));
+        keys.Add(("Q", "Cancel game"));
         keys.Add(("R", "Re-render screen"));
 #if DEBUG
         keys.Add(("Space", "Hint mines"));
