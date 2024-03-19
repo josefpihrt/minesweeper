@@ -1,0 +1,122 @@
+{
+  "minesweeper": {
+    "useQuestionMark": false,
+    "showMineCount": true,
+    "presets": [
+      {
+        "name": "beginner",
+        "shortName": "b",
+        "width": 9,
+        "height": 9,
+        "mineCount": 10
+      },
+      {
+        "name": "intermediate",
+        "shortName": "i",
+        "width": 16,
+        "height": 16,
+        "mineCount": 40,
+        "isDefault": true
+      },
+      {
+        "name": "expert",
+        "shortName": "e",
+        "width": 30,
+        "height": 16,
+        "mineCount": 99
+      },
+      {
+        "name": "max",
+        "shortName": "m",
+        "width": 0,
+        "height": 0,
+        "mineCount": 0
+      }
+    ],
+    "selectedCellFormat": {
+      "character": "\u0000",
+      "foregroundColor": "Black",
+      "backgroundColor": "White"
+    },
+    "verticalSeparatorCellFormat": {
+      "character": " ",
+      "foregroundColor": null,
+      "backgroundColor": null
+    },
+    "unknownCellFormat": {
+      "character": "*",
+      "foregroundColor": "DarkGray",
+      "backgroundColor": null
+    },
+    "questionMarkCellFormat": {
+      "character": "?",
+      "foregroundColor": "DarkGray",
+      "backgroundColor": null
+    },
+    "emptyCellFormat": {
+      "character": " ",
+      "foregroundColor": null,
+      "backgroundColor": null
+    },
+    "flaggedCellFormat": {
+      "character": "\u003E",
+      "foregroundColor": "Red",
+      "backgroundColor": null
+    },
+    "incorrectlyFlaggedCellFormat": {
+      "character": "X",
+      "foregroundColor": "Red",
+      "backgroundColor": null
+    },
+    "mineCellFormat": {
+      "character": "O",
+      "foregroundColor": "Black",
+      "backgroundColor": "DarkGray"
+    },
+    "hitMineCellFormat": {
+      "character": "O",
+      "foregroundColor": "Black",
+      "backgroundColor": "Red"
+    },
+    "oneNearMineCellFormat": {
+      "character": "1",
+      "foregroundColor": "Blue",
+      "backgroundColor": null
+    },
+    "twoNearMinesCellFormat": {
+      "character": "2",
+      "foregroundColor": "Green",
+      "backgroundColor": null
+    },
+    "threeNearMinesCellFormat": {
+      "character": "3",
+      "foregroundColor": "Magenta",
+      "backgroundColor": null
+    },
+    "fourNearMinesCellFormat": {
+      "character": "4",
+      "foregroundColor": "DarkBlue",
+      "backgroundColor": null
+    },
+    "fiveNearMinesCellFormat": {
+      "character": "5",
+      "foregroundColor": "DarkRed",
+      "backgroundColor": null
+    },
+    "sixNearMinesCellFormat": {
+      "character": "6",
+      "foregroundColor": "DarkCyan",
+      "backgroundColor": null
+    },
+    "sevenNearMinesCellFormat": {
+      "character": "7",
+      "foregroundColor": "DarkMagenta",
+      "backgroundColor": null
+    },
+    "eightNearMinesCellFormat": {
+      "character": "8",
+      "foregroundColor": "DarkYellow",
+      "backgroundColor": null
+    }
+  }
+}
