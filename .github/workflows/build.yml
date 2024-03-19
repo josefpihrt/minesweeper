@@ -54,7 +54,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: nuget_packages
-          path: src/DotNetGame.Cli/bin/Release/*.*nupkg
+          path: src/Minesweeper/bin/Release/*.*nupkg
 
   publish:
     runs-on: ubuntu-20.04
