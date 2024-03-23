@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace Minesweeper;
 
@@ -35,6 +36,8 @@ internal sealed class MinesweeperGameState
 
     public GameResult Run()
     {
+        bool isMac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
+
         while (true)
         {
             ConsoleKeyInfo info = Console.ReadKey(intercept: true);
@@ -138,7 +141,7 @@ internal sealed class MinesweeperGameState
                             if (Column > 0)
                                 SelectCells(Row, Column - 1);
                         }
-                        else if (alt)
+                        else if ((isMac) ? alt : control)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsLeft(), cell.IsUnknown);
@@ -163,7 +166,7 @@ internal sealed class MinesweeperGameState
                             if (Row > 0)
                                 SelectCells(Row - 1, Column);
                         }
-                        else if (alt)
+                        else if ((isMac) ? alt : control)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsUp(), cell.IsUnknown);
@@ -183,7 +186,7 @@ internal sealed class MinesweeperGameState
                             if (Column < Width - 1)
                                 SelectCells(Row, Column + 1);
                         }
-                        else if (alt)
+                        else if ((isMac) ? alt : control)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsRight(), cell.IsUnknown);
@@ -207,7 +210,7 @@ internal sealed class MinesweeperGameState
                             if (Row < Height - 1)
                                 SelectCells(Row + 1, Column);
                         }
-                        else if (alt)
+                        else if ((isMac) ? alt : control)
                         {
                             Cell? cell = SelectedCell!;
                             cell = FindNearUnknownCell(cell.EnumerateCellsDown(), cell.IsUnknown);
