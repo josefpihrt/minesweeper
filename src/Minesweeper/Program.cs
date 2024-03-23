@@ -75,7 +75,7 @@ internal static class Program
         }
         else
         {
-            keys.Add(("Alt+Arrow", "Jump to next unknown cell"));
+            keys.Add(("Control+Arrow", "Jump to next unknown cell"));
         }
 
         keys.Add(("Shift+Arrow", "Expand selection"));
