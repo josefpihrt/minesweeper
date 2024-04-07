@@ -71,11 +71,11 @@ internal static class Program
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            keys.Add(("Option+Arrow", "Jump to next unknown cell"));
+            keys.Add(("Option+Arrow", "Jump to a next unknown cell"));
         }
         else
         {
-            keys.Add(("Alt+Arrow", "Jump to next unknown cell"));
+            keys.Add(("Control+Arrow", "Jump to a next unknown cell"));
         }
 
         keys.Add(("Shift+Arrow", "Expand selection"));
